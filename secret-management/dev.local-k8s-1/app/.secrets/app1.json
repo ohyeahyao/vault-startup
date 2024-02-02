@@ -1,0 +1,23 @@
+{
+	"DB_PASSWORD": "ENC[AES256_GCM,data:23+TuUhd/Bk+SfmfnacF799S8BgAKw==,iv:s246QSh2craKlsGvk6wcHIBU0tunddikkhxVIi3nVmU=,tag:XFdojorv+gFaU2oSnS0ckg==,type:str]",
+	"AWS_ACCESS_KEY_ID": "ENC[AES256_GCM,data:IwKL++d8AZn2WV4WF+i4n/JzotxkKg==,iv:TtFPF0aZS1lPcY6oBYM6RP+/8JRIKUeFAGp9CK9C2lE=,tag:ut7qpRwSz2vpuvkHLiNU2Q==,type:str]",
+	"AWS_SECRET_ACCESS_KEY": "ENC[AES256_GCM,data:R2Mgs9DnyISnoYipQJOLb84mPenwgDd3TLA=,iv:UKCki44mRafaWZoBxZUmaPii/3l8dkawd79iDNi6Src=,tag:7cA3JDN/U1EJEsaiDkKWeQ==,type:str]",
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": null,
+		"lastmodified": "2024-02-02T09:57:45Z",
+		"mac": "ENC[AES256_GCM,data:kH31HMzRtzhDZ0gwagXKyX1rMQovvsL0iy/FdAKlDFXy3FjxDsv9HApozAY8BNJli6nyYmI+ECZJUETAY7Ub4iJPYxITKPSB+SuPuXmZErRs4yGKkbGGeBIxW7xFfvRFYKdtK+z6C5BhKTQXZ+DlWo1er7QY4aYDoQnjZLSJqeQ=,iv:eUtY4Qm8lDEOsgUWFQiwJ5GNUk53X8/p9iApU52bFkA=,tag:mCVAc613nTMMky4P2SsTLQ==,type:str]",
+		"pgp": [
+			{
+				"created_at": "2024-02-02T09:57:45Z",
+				"enc": "-----BEGIN PGP MESSAGE-----\n\nhQIMAzZU8iFrO9ZyAQ/+Mu1vX4NmMl5v5pE1DBYYJagGtJrdxdHoEEc6lWebBxYP\nEyy02ivoJmy1s6NNqtb96umFIr9lUtkoulUUvGqwVBnUtNITHfBeze5wfy/hthqy\nOUzlq+wLSrq5J6KgdOXaILNPyEzkOx3/NNQme3Hn9Nhpyx/ZqmNsFkpXIDffiFcu\ncZrgwIluB3mRaEvOa6VcX3nEt5DaZrWaeZBnO9ql7Ozzg0u69EGuv8cX2jlLslLr\nB4wFnG+A2cSXq9oCbr4zat5dBnEeiiJKO4B6zW0ZlN3GKM4etvM7g+sTqHpmzeUr\nf2sDNuPV2+KHxB8Pt9XY2PvNIOx5hI7sgOHZw8sXMiLGobST0txhOdZrBQptISJ7\nX6hlaiujWUVg7b3mbeER1/6sVOeioV410oJcd53RucVKJ4JH3ss2xxmU34GXeLlQ\n5u5CauEgialErL74mkdTM3o44U56tM+B0g4iV1/Dd0yiOCzxKVcJzlkbEB1DQ5bn\n+CmlJi5cDSOPyeZtLMZAmOnEt2oQQUqXxtRNGpVHeR9TL73p4S/SvAk7iVpzSMWf\nz1jCdHA9wIEx45Z8rPMYFzinMdFM7icZ97WGFbh1cEJcvCLEelCdTaQiS6b8mg3G\nOw1Yg8tkZe47q7udr0ZxaarW2xdz3t+0BxWZbLQfhJgLciwdLvpnL+A3tpHTQpfU\naAEJAhAj18dE4xNGm5i5j2UvrqYdU8MLLH5FNSlXSZAGrhfIaNj62xDO3dFNFBOH\neDwVxBnF7ymK1V4rbnK1/scLMfhUzv1ZqT7dK8ogtj86OIGoGaJfbvEHGYez91m7\ndgNZf47Pmjkn\n=u0VT\n-----END PGP MESSAGE-----",
+				"fp": "A33CB21B58B663F5FFD3FE8264D00D1B28308045"
+			}
+		],
+		"encrypted_regex": "(?i)^(.*PASSWORD.*|.*KEY.*|.*TOKEN.*)$",
+		"version": "3.8.1"
+	}
+}

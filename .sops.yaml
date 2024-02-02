@@ -1,0 +1,11 @@
+creation_rules:
+  - path_regex: .*dev.*
+    pgp: "A33CB21B58B663F5FFD3FE8264D00D1B28308045"
+    encrypted_regex: '(?i)^(.*PASSWORD.*|.*KEY.*|.*TOKEN.*|.*SECRET.*)$'
+
+  # - path_regex: .*dev.*
+  #   gcp_kms: projects/{PROJECT_ID}/locations/global/keyRings/{KEY_RING_NAME}/cryptoKeys/sops-key
+  #   encrypted_regex: '(?i)^(.*PASSWORD.*|.*KEY.*|.*TOKEN.*)$'
+
+  - gcp_kms: "error: 請設定環境使用的 KMS"
+    encrypted_regex: '(?i)^(.*PASSWORD.*|.*KEY.*|.*TOKEN.*|.*SECRET.*)$'

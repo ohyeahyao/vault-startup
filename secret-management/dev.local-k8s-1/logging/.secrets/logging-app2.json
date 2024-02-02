@@ -1,0 +1,27 @@
+{
+	"command": {
+		"encrypt": "sops -e secret-management/dev.local-k8s-1/logging/.secrets/logging-app2.json",
+		"decrypt": "sops -d secret-management/dev.local-k8s-1/logging/.secrets/logging-app2.json"
+	},
+	"API_TOKEN": "ENC[AES256_GCM,data:H+bWQ/A2wMwQ255GKtC0ajzxzL6sqefaag==,iv:acs2rYm+3CEuo388MZK2dTv6VfLLrLIwDjRqpCBx0g4=,tag:fI7WCh0nQ9CvxdrEd+tMaQ==,type:str]",
+	"K8S_SECRET": "ENC[AES256_GCM,data:4Yja1nK7SN0wSU+yOBwbU3p42RvADRj8jUM=,iv:RooFF2x5fKbswbXlm2BBEEaXE64Ej48GROiZpCJaCHg=,tag:TKemYCIlfCYzI5wOoGSqaQ==,type:str]",
+	"K8S_ACCOUNT_NAME": "k8s account name here2222222",
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": null,
+		"lastmodified": "2024-02-02T10:16:53Z",
+		"mac": "ENC[AES256_GCM,data:zzxUNI3xMKFGNhT8ul81KfeDs3pNqPFkV4oF/WYPFYaHk2+ZqoRDa/Uu3ST/ZF74nED92j9nzytRSmI6imz5b0lA9VWYIRsT1584s7vMITust6cJeY+F500OVHHPjwv3z8oofq/7NU2QsgNoyOUBEEs6/rmjHRGCOLEbAR5L9Xg=,iv:V1x+4X3EIoEb9ZeGFlPFggrUlisri36Q4XGoMD2fdGo=,tag:Hc15g6UvGNyeSAuBjr3vPQ==,type:str]",
+		"pgp": [
+			{
+				"created_at": "2024-02-02T10:16:53Z",
+				"enc": "-----BEGIN PGP MESSAGE-----\n\nhQIMAzZU8iFrO9ZyAQ/+KpeCy/xO4zjMmyzr1WVzZvfSiVOua7/0lV6EVoRZyVuV\n5qq+TBFtznrEcZrFU8h3wB4M9fuQwby5zzwaIpjFNzz5O2H3HdEBhd8oYaTZr+cy\nMMbtq/ojP3qaSWZUI+xvvCcmrhs+0C5bL6pIIomLu/7rEyP1eb3bjdWTEyNvr+Na\n21IRiwg2+aZG3BxURcN/NN/Onkd11HjIti8ZF5KYrkCLXzcFryy2zWBz/M55h6mF\nItP/sokSBtYffaJ41+MifAeXR04DTENsZ9IMmfTCBKj4RM3Mn8Cw8/7M28DjR1ce\nxC7sQLwP2yahDjQnj1aM1Ow2Bob9HfCqC/jPMCawroiU/pyehjZMOueUOdTp1UZs\nYuDjJlL6xsv2rEZBsGLH8eGx6sxCTdLM09rZ7p2+SPcnnE2gxGPOr4lbwSh/YaGb\nzZrHswdjMULM3ywSmybUzY6jLVqut8oe2FjEtT9+s0elVtMGzKe//EfvG8iMYS4m\n6qPv/vj9iKLP9CcO+rG2xznsIsT9xxs17FtZpqni8/LbipO6gpULOMTXw5OUkKi7\nZPH1p0BUwo3yHV/wRDvkJ7pIji1y92opMbDC0N5e+VED4529GbwfpB2uW6+DhEyu\n0yrfl8TI582158+nXqYd74VaT8BkytkWhrueX5s/nOZOXW9fNJo+lgoPo57ztI7U\naAEJAhB4koFrfqwh1rnkncKSdYUnPpH9+K9iba7TtS5gUJh6mJASiAv7EGotbCDG\nIt+9UXsw3auTPYQPFVrezm4IulXVh+3ylpYEDSTVCOR2C0utglTDel/mjrw6sGL2\nRGLrzQyfC3D1\n=TXRY\n-----END PGP MESSAGE-----",
+				"fp": "A33CB21B58B663F5FFD3FE8264D00D1B28308045"
+			}
+		],
+		"encrypted_regex": "(?i)^(.*PASSWORD.*|.*KEY.*|.*TOKEN.*|.*SECRET.*)$",
+		"version": "3.8.1"
+	}
+}

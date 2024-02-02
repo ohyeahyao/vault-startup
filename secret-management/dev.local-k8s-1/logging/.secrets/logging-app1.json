@@ -1,0 +1,27 @@
+{
+	"command": {
+		"encrypt": "sops -e secret-management/dev.local-k8s-1/logging/.secrets/logging-app1.json",
+		"decrypt": "sops -d secret-management/dev.local-k8s-1/logging/.secrets/logging-app1.json"
+	},
+	"API_TOKEN": "ENC[AES256_GCM,data:vaWxbhXtnqyx6jGgvcsTzu0vhoqLTmc=,iv:6ZPuGCGE9wGweDIls6tFh74F9F6uBcG7evFCgMFPlao=,tag:d7Ra+Ea/dWXzkCiBbaGVQQ==,type:str]",
+	"K8S_SECRET": "ENC[AES256_GCM,data:dfADiDYEpcpEhKX6eBMpN0LC8PDIqlCd,iv:D9EV6ajqX2E72oP0kpNY/y+RGL+bFfnnD/Ph1zVsc9s=,tag:d05JmTDAuTn5Y7nAzZ3GYg==,type:str]",
+	"K8S_ACCOUNT_NAME": "k8s account name here111111111",
+	"sops": {
+		"kms": null,
+		"gcp_kms": null,
+		"azure_kv": null,
+		"hc_vault": null,
+		"age": null,
+		"lastmodified": "2024-02-02T10:17:01Z",
+		"mac": "ENC[AES256_GCM,data:kLvwy0l0q0wzG7ln10s3mS7MwGilQBaemvcffhPkmL8bZD8CCvMXzfxWKR610DnZU4sFr1pFnpFbzuY3lBgmkKinCMPT7TEFqzXHJkUGgHvBrrbupPj/6/K2PLKPmdPVQMF91LNofdt5Ms8G0F9PXybz2x1ngkp/gS+DbgkF9NA=,iv:fH5SksX9m2lC6rY1A+4IWnOU9NYKqbKnLiNbzWPfHIw=,tag:Kr3PEsaO7D5yfWSqwfUJgQ==,type:str]",
+		"pgp": [
+			{
+				"created_at": "2024-02-02T10:17:01Z",
+				"enc": "-----BEGIN PGP MESSAGE-----\n\nhQIMAzZU8iFrO9ZyAQ/8Du0TJB3fk3rzi9w/rPVAqkQ39wLbL/qZXxxhiVbznt7W\n5g8yv7nAvOUnuLfowATVOxnh2l9OAc/3pa+Kw3we1XC4Wx9Ruvm9nVlKIejkO/RL\nNA6UlJHEjuPpFw5tVWGGBUK4fSU7wFY9rjhsZDl2cYO6d9xawLwM0d7/2UEum3eX\ngdkv49+lVNS3z5/dkMp8juWscBxKgBMM9MrcPiiZ04oDkQ0bvLJbtE4jNsovg2qn\nVhryUEeXsCtpAwLs7rOFSjF65AsK7MTf5VvtEHcvuUBuLmDBtJNJ6admU6vbca/k\nWGlItPX7TR3QUCs5Q9a3niCG+USNaqJdFW4HfPINifajAQ7U3jAbg7kCzqovLbqF\nrGs+4Xrl8603OI4CWziT51IZLMTR45G2CC/xMz0jQvQlbHl42PTh7H80R9PcJaIC\n8pEE+dYuqBKVud3v14kdqSx7QeLEUjlCCQqwmJVtzeVgKmAgeicbgtW3wCtAu27C\nyOKtb02i9QqzmLvYB5aQpenI34zSowMEuPd3e4DSbhVMHlemx6VQj2dKINX31q9z\nRqZTc2nXrIvcap0GKgO+wmGG7U5FYDji17YfRZ6sCuR48dAQ4WiCBPtcglTHgUuq\nsnD9R6EvnBJJiehGxr6x5ojSOhrcp8HFw4gdg6njb4kax+vUNelPwYPOqhiXvS/U\naAEJAhA6KHd9ZLI8ovB2NzwqesHekE/IDmIksq/D/kt5t3H8qY0JqLGkbaN6L4xj\n0EP9ZDXWIN37m4hkZ9ezgIITnC+7HiZ/r4cs2U6BCQL8t02zWtsk3HihnTNJMlMa\nRJ9l6//fciN9\n=OQ0E\n-----END PGP MESSAGE-----",
+				"fp": "A33CB21B58B663F5FFD3FE8264D00D1B28308045"
+			}
+		],
+		"encrypted_regex": "(?i)^(.*PASSWORD.*|.*KEY.*|.*TOKEN.*|.*SECRET.*)$",
+		"version": "3.8.1"
+	}
+}
