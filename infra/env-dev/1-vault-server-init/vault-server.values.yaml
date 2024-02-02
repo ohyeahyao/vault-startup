@@ -1,0 +1,56 @@
+# kubectl config use-context local-k8s-1
+# helm diff upgrade vault hashicorp/vault -n vault -f infra/env-dev/1-vault-server-init/vault-server.values.yaml
+
+server:
+  logLevel: debug
+  updateStrategyType: RollingUpdate
+
+  service:
+    enabled: true
+    type: ClusterIP
+    
+  extraEnvironmentVars:
+    GOOGLE_REGION: global
+    GOOGLE_PROJECT: {MY_PROJECT_ID}
+    GOOGLE_APPLICATION_CREDENTIALS: /vault/user-config/vault-kms-crt/vault-service-account.json
+  
+  volumes:
+    - name: vault-kms-crt
+      secret:
+        defaultMode: 420
+        secretName: vault-kms-crt
+
+  volumeMounts:
+    - mountPath: /vault/user-config/vault-kms-crt
+      name: vault-kms-crt
+      readOnly: true
+
+  standalone:
+    enabled: true
+    config: |
+      ui = true
+
+      listener "tcp" {
+        tls_disable = 1
+        address = "[::]:8200"
+        cluster_address = "[::]:8201"
+      }
+
+      storage "file" {
+        path = "/vault/data"
+      }
+
+      seal "gcpckms" {
+        project     = "{MY_PROJECT_ID}"
+        region      = "global"
+        key_ring    = "vault-keyring"
+        crypto_key  = "vault-key"
+      }
+
+ui:
+  enabled: true
+  serviceType: "LoadBalancer"
+  externalPort: 8200
+
+injector:
+  enabled: false
