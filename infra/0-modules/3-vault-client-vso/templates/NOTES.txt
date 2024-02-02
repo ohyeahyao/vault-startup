@@ -1,0 +1,12 @@
+{{- $serviceAccountName := .Values.serviceAccount.name }}
+{{- $serviceAccountNamespace := .Release.Namespace }}
+
+Your release is named {{ .Release.Name }}.
+
+Obtain the required authentication credentials for the service account and store them in the appropriate folder:
+
+1. Fetch JWT token:
+$ kubectl get secret {{ $serviceAccountName }} -n {{ $serviceAccountNamespace }} -o=jsonpath='{.data.token}' | base64 --decode
+
+2. Fetch CA Cert:
+$ kubectl get secret {{ $serviceAccountName }} -n {{ $serviceAccountNamespace }} -o=jsonpath='{.data.ca\.crt}' | base64 --decode

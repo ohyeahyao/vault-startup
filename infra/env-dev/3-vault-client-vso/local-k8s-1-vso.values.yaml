@@ -1,0 +1,19 @@
+# cd infra/env-dev/3-vault-client-vso
+# kubectl config use-context local-k8s-1
+# helm diff upgrade vault-secrets-operator ../../0-modules/3-vault-client-vso -n vault-secrets-operator-system -f local-k8s-1-vso.values.yaml
+
+vault-secrets-operator:
+  defaultAuthMethod:
+    namespace: vault-secrets-operator-system
+    mount:  local-k8s-1-auth-mount
+  defaultVaultConnection:
+    enabled: true
+    address: http://vault.vault.svc.cluster.local:8200
+
+serviceAccount:
+  name:  vault-auth-service-account
+  namespaces:
+    - app
+    - logging
+    - vault-secrets-operator-system
+    
