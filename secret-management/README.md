@@ -18,3 +18,16 @@
 ├── .... other context
 └── prod.gke-prod-cluster     # k8s cluster context name
 ```
+
+# Follow steps below:
+## 1. import GPG Key for SOPS
+```bash
+$ gpg --import ./my-gpg-key.asc
+```
+
+## 2. Deploy Secret
+```bash
+$ cd dev.local-k8s-1
+$ terraform init
+$ terraform apply
+```
