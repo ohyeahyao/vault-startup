@@ -17,6 +17,12 @@ provider "kubernetes" {
   config_context = "local-k8s-1"
 }
 
+provider "kubernetes" {
+  alias          = "local-k8s-2"
+  config_path    = "~/.kube/config"
+  config_context = "local-k8s-2"
+}
+
 # kubectl config use-context local-k8s-1
 # VAULT_SERVER_IP=$(kubectl get svc "vault-ui" -n vault -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
 # VAULT_ADDR=http://${VAULT_SERVER_IP}:8200
