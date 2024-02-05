@@ -39,3 +39,9 @@ gpg --export-secret-keys -a my-sops-key > ./my-gpg-key.asc
 ```bash
 gpg --import ./my-gpg-key.asc
 ```
+
+---
+**NOTE**
+my-gpg-key.asc is PGP private key for presentation, And does not commit it in production.
+
+---
