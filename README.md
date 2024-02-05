@@ -1,4 +1,5 @@
 # Vault Startup
+![vault architecture](./architecture.png)
 
 ```
 .
